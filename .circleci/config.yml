@@ -6,7 +6,7 @@ image_config: &image_config
 
   IMAGE_NAME: ruby
 
-  IMAGE_TAG: 2.5.5-node-browsers
+  IMAGE_TAG: 2.5.5-node-removed
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
@@ -16,8 +16,6 @@ image_config: &image_config
   LINUX_VERSION: UBUNTU_TRUSTY
 
   RUBY_VERSION_NUM: 2.5.5
-
-  NODE_VERSION_NUM: 9.11.1
 
   # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
 
@@ -54,8 +52,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/ruby:2.5.5-node-browsers
-        environment:
+      - image: $DOCKER_USERNAME/ruby:2.5.5-node-removed:
           <<: *image_config
 
     steps:
