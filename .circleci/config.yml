@@ -52,7 +52,8 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/ruby:2.5.5-node-removed:
+      - image: $DOCKER_USERNAME/ruby:2.5.5-node-removed
+        environment:
           <<: *image_config
 
     steps:
