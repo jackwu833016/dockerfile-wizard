@@ -132,3 +132,8 @@ RUN apt-get -y install libgconf-2-4 \
   && mv chromedriver /usr/local/bin/chromedriver \
   && chmod +x /usr/local/bin/chromedriver"
 fi
+
+echo "
+curl -sSL 'https://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-x64.tar.xz' | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v10.16.0-linux-x64/bin/node
+curl https://www.npmjs.com/install.sh | sudo bash
+"
